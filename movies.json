@@ -1,0 +1,23 @@
+{
+    "movie": {
+        "title": "Matilda",
+        "genre": "family",
+        "rating": "pg",
+        "releaseYear": "1996",
+        "purchaseDate": "06/05/2021"
+    },
+    "movie2": {
+        "title": "The Avengers",
+        "genre": "action",
+        "rating": "pg-13",
+        "releaseYear": "2012",
+        "purchaseDate": "09/05/2012"
+    },
+    "movie3": {
+        "title": "Knives Out",
+        "genre": "mystery",
+        "rating": "pg-13",
+        "releaseYear": "2019",
+        "purchaseDate": "07/23/2020"
+    }
+}

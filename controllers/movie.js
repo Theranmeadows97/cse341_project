@@ -22,7 +22,9 @@ const addMovie = async (req, res) => {
   const newMovie = {
     title: req.body.title,
     genre: req.body.genre,
+    subGenres: req.body.subGenres,
     rating: req.body.rating,
+    content: req.body.content,
     releaseYear: req.body.releaseYear,
     purchaseDate: req.body.purchaseDate
   };
@@ -38,7 +40,9 @@ const updateMovie = async (req, res) => {
   const movie = {
     title: req.body.title,
     genre: req.body.genre,
+    subGenres: req.body.subGenres,
     rating: req.body.rating,
+    content: req.body.content,
     releaseYear: req.body.releaseYear,
     purchaseDate: req.body.purchaseDate
   };
@@ -62,4 +66,12 @@ const deleteMovie = async (req, res) => {
   }
 };
 
-module.exports = { getMovies, getMovie, addMovie, updateMovie, deleteMovie };
+const getActors = async (req, res) => {
+    const data = await mongodb.getDb().db('movieData').collection('actors').find();
+    data.toArray().then((lists) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists);
+    });
+  };
+
+module.exports = { getMovies, getMovie, addMovie, updateMovie, deleteMovie, getActors };

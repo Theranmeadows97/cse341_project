@@ -1,7 +1,7 @@
 //Local Host: 
-### All Contacts
+### All Movies
 GET http://localhost:3000/movies
- 
+
 # ONE CONTACT
 ###Matilda
 GET http://localhost:3000/movies/6334a389e784cb4ce76ca99a HTTP/1.1
@@ -18,25 +18,29 @@ POST http://localhost:3000/movies  HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Star Wars: Return of the Jedi",
-   "genre": "science fiction",
-    "rating": "pg",
-    "releaseYear": "1983",
-    "purchaseDate": "03/14/2015"
+    "title": "The Avengers",
+   "genre": "Action",
+   "subGenres": "superhero, comedy",
+    "rating": "pg-13",
+    "content": "violence, language",
+    "releaseYear": "2012",
+    "purchaseDate": "09/14/2012"
 }
 
 
 ###UPDATE CONTACT
-PUT http://localhost:3000/movies/6334b7e0ff3fcb0175bba19a HTTP/1.1
+PUT http://localhost:3000/movies/6334c4a6c1c98838e6cfe4c5 HTTP/1.1
 Content-Type: application/json
 
 {
     
-    "title": "Star Wars: A New Hope",
-   "genre": "science fiction",
-    "rating": "pg",
-    "releaseYear": "1977",
-    "purchaseDate": "03/14/2015"
+    "title": "The Avengers",
+   "genre": "Action",
+   "subGenres": "superhero, comedy",
+    "rating": "pg-13",
+    "content": "violence, language",
+    "releaseYear": "2012",
+    "purchaseDate": "09/14/2012"
 }
 
 ###DELETE CONTACT

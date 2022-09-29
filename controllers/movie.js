@@ -66,12 +66,12 @@ const deleteMovie = async (req, res) => {
   }
 };
 
-const getActors = async (req, res) => {
-    const data = await mongodb.getDb().db('movieData').collection('actors').find();
-    data.toArray().then((lists) => {
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(lists);
-    });
-  };
+// const getActors = async (req, res) => {
+//     const data = await mongodb.getDb().db('movieData').collection('actors').find();
+//     data.toArray().then((lists) => {
+//       res.setHeader('Content-Type', 'application/json');
+//       res.status(200).json(lists);
+//     });
+//   };
 
-module.exports = { getMovies, getMovie, addMovie, updateMovie, deleteMovie, getActors };
+module.exports = { getMovies, getMovie, addMovie, updateMovie, deleteMovie, /*getActors*/ };

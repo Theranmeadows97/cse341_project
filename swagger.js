@@ -2,8 +2,8 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'Contact API',
-    description: 'Contacts'
+    title: 'Movie and Actor API',
+    description: 'Project 1 for CSE 341'
   },
 
   // RENDER

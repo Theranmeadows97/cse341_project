@@ -30,6 +30,7 @@ const getActors = async (req, res) => {
       res.status(500).json(response.error || 'New actor failed to be added.');
     }
   };
+
   const updateActor = async (req, res) => {
     const actorId = new ObjectId(req.params.id);
     const actor = {
@@ -46,7 +47,7 @@ const getActors = async (req, res) => {
   };
   
   const deleteActor = async (req, res) => {
-    const ActorId = new ObjectId(req.params.id);
+    const actorId = new ObjectId(req.params.id);
     const response = await mongodb.getDb().db('movieData').collection('actors').remove({_id: actorId }, true);
     console.log(response);
     if (response.deletedCount > 0) {

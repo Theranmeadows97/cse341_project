@@ -1,0 +1,38 @@
+//Local Host: 
+### All Actors
+GET http://localhost:3000/actors
+
+# ONE Actor
+###Mara Wilson
+GET http://localhost:3000/actors/6334c6059539824231cf9bc8 HTTP/1.1
+
+###Mark Hamilton
+GET http://localhost:3000/movies/6334c70a9539824231cf9bc9 HTTP/1.1
+
+###Daniel Craig
+GET http://localhost:3000/movies/6334c71a9539824231cf9bca HTTP/1.1
+
+
+###Add New Actor
+POST http://localhost:3000/movies  HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Arnold Swartzanegger",
+    "movie": "The Terminator"
+}
+
+
+###UPDATE Actor
+PUT http://localhost:3000/movies/6334c71a9539824231cf9bca HTTP/1.1
+Content-Type: application/json
+
+{
+    
+   "name": "Daniel Craig",
+   "movie": "Knives out, 007"
+}
+
+###DELETE Actor
+
+DELETE http://localhost:3000/movies/6334c71a9539824231cf9bca

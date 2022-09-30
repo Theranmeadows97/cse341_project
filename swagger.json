@@ -1,14 +1,14 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Contacts",
-    "description": "Contacts",
+    "title": "Movie and Actor API",
+    "description": "Project 1 for CSE 341",
     "version": "1.0.0"
   },
-  "host": "cse341-project.onrender.com",
+  "host": "localhost:1000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/movies/": {

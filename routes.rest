@@ -1,20 +1,20 @@
 //Local Host: 
 ### All Movies
-GET http://localhost:3000/movies
+GET http://localhost:1000/movies
 
 # ONE CONTACT
 ###Matilda
-GET http://localhost:3000/movies/6334a389e784cb4ce76ca99a HTTP/1.1
+GET http://localhost:1000/movies/6334a389e784cb4ce76ca99a HTTP/1.1
 
 ###The Avengers
-GET http://localhost:3000/movies/6334a3e9e784cb4ce76ca99b HTTP/1.1
+GET http://localhost:1000/movies/6334a3e9e784cb4ce76ca99b HTTP/1.1
 
 ###Knives Out
-GET http://localhost:3000/movies/6334a402e784cb4ce76ca99c HTTP/1.1
+GET http://localhost:1000/movies/6334a402e784cb4ce76ca99c HTTP/1.1
 
 
 ###Add New Movie
-POST http://localhost:3000/movies  HTTP/1.1
+POST http://localhost:1000/movies  HTTP/1.1
 Content-Type: application/json
 
 {
@@ -29,7 +29,7 @@ Content-Type: application/json
 
 
 ###UPDATE CONTACT
-PUT http://localhost:3000/movies/6334c4a6c1c98838e6cfe4c5 HTTP/1.1
+PUT http://localhost:1000/movies/6334c4a6c1c98838e6cfe4c5 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -45,4 +45,5 @@ Content-Type: application/json
 
 ###DELETE CONTACT
 
-DELETE http://localhost:3000/movies/6334c4a6c1c98838e6cfe4c5
+DELETE http://localhost:1000/movies/6334c4a6c1c98838e6cfe4c5 HTTP/1.1
+Content-Type: application/json

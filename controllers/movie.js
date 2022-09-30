@@ -35,6 +35,10 @@ const addMovie = async (req, res) => {
     res.status(500).json(response.error || 'New movie failed to be added.');
   }
 };
+
+
+
+
 const updateMovie = async (req, res) => {
   const movieId = new ObjectId(req.params.id);
   const movie = {

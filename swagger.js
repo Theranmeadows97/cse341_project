@@ -7,15 +7,15 @@ const doc = {
   },
 
   // RENDER
-  host: 'cse341-project.onrender.com',
-  schemes: ['https']
-};
+//   host: 'cse341-project.onrender.com',
+//   schemes: ['https']
+// };
 
 //LOCALHOST
 
-// host: 'localhost:3000',
-// schemes: ['http']
-// };
+host: 'localhost:1000',
+schemes: ['http']
+};
 
 
 

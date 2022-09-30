@@ -1,20 +1,20 @@
 //Local Host: 
 ### All Actors
-GET http://localhost:3000/actors
+GET http://localhost:1000/actors
 
 # ONE Actor
 ###Mara Wilson
-GET http://localhost:3000/actors/6334c6059539824231cf9bc8 HTTP/1.1
+GET http://localhost:1000/actors/6334c6059539824231cf9bc8 HTTP/1.1
 
 ###Mark Hamilton
-GET http://localhost:3000/actors/6334c70a9539824231cf9bc9 HTTP/1.1
+GET http://localhost:1000/actors/6334c70a9539824231cf9bc9 HTTP/1.1
 
 ###Daniel Craig
-GET http://localhost:3000/actors/6334c71a9539824231cf9bca HTTP/1.1
+GET http://localhost:1000/actors/6334c71a9539824231cf9bca HTTP/1.1
 
 
 ###Add New Actor
-POST http://localhost:3000/actors  HTTP/1.1
+POST http://localhost:1000/actors  HTTP/1.1
 Content-Type: application/json
 
 {
@@ -24,7 +24,7 @@ Content-Type: application/json
 
 
 ###UPDATE Actor
-PUT http://localhost:3000/actors/6334c71a9539824231cf9bca HTTP/1.1
+PUT http://localhost:1000/actors/6334c71a9539824231cf9bca HTTP/1.1
 Content-Type: application/json
 
 {
@@ -35,4 +35,4 @@ Content-Type: application/json
 
 ###DELETE Actor
 
-DELETE http://localhost:3000/actors/6334e9f4e19173190ff974c6
+DELETE http://localhost:1000/actors/6334e9f4e19173190ff974c6

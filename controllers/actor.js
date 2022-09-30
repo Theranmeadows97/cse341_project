@@ -10,6 +10,9 @@ const getActors = async (req, res) => {
   };
 
   const getActor = async (req, res) => {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid actor id to find an actor.');
+    }
     const actorId = new ObjectId(req.params.id);
     const data = await mongodb.getDb().db('movieData').collection('actors').find({_id: actorId});
     data.toArray().then((lists) => {
@@ -32,6 +35,9 @@ const getActors = async (req, res) => {
   };
 
   const updateActor = async (req, res) => {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid actor id to update an actor.');
+    }
     const actorId = new ObjectId(req.params.id);
     const actor = {
       name: req.body.name,
@@ -47,6 +53,9 @@ const getActors = async (req, res) => {
   };
   
   const deleteActor = async (req, res) => {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid actor id to delete an actor.');
+    }
     const actorId = new ObjectId(req.params.id);
     const response = await mongodb.getDb().db('movieData').collection('actors').remove({_id: actorId }, true);
     console.log(response);

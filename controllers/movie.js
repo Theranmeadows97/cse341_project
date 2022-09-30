@@ -10,6 +10,9 @@ const getMovies = async (req, res) => {
 };
 
 const getMovie = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid movie id to find a movie.');
+  }
   const movieId = new ObjectId(req.params.id);
   const data = await mongodb.getDb().db('movieData').collection('movies').find({_id: movieId});
   data.toArray().then((lists) => {
@@ -40,6 +43,9 @@ const addMovie = async (req, res) => {
 
 
 const updateMovie = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid movie id to update a movie.');
+  }
   const movieId = new ObjectId(req.params.id);
   const movie = {
     title: req.body.title,
@@ -60,6 +66,9 @@ const updateMovie = async (req, res) => {
 };
 
 const deleteMovie = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid movie id to delete a movie.');
+  }
   const movieId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db('movieData').collection('movies').remove({_id: movieId }, true);
   console.log(response);
